@@ -57,7 +57,15 @@ a:focus {
     color: #11505d;
 }
 
+div.screenshot {
+    content: url(../img/screenshot1.png);
+    width: 20%;
+    height: 20%;
+    display: inline-block;
+}
+
 .light {
+    font-size: 40px;
     font-weight: 400;
 }
 
@@ -266,11 +274,15 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 150px;
+        padding-top: 150px;
+
     }
 
     .team-section {
-        padding: 100px 0;
+        padding-top: 150px;
+        padding-bottom: 150px;
+
     }
 
 }
