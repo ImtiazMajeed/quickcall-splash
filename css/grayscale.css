@@ -57,12 +57,33 @@ a:focus {
     color: #11505d;
 }
 
-div.screenshot {
+/*div.screenshot {
     content: url(../img/screenshot1.png);
     width: 20%;
     height: 20%;
     display: inline-block;
+}*/
+.screenshot1, .screenshot2, .screenshot3, .screenshot4 {
+    display: inline-block;
+    width: 10em;
 }
+
+.screenshot1 {
+    content: url(../img/screenshot-dialer.png);
+}
+.screenshot2 {
+    content: url(../img/screenshot-contacts.png);
+
+}
+.screenshot3 {
+    content: url(../img/screenshot-call.png);
+
+}
+.screenshot4 {
+    content: url(../img/screenshot-text.png);
+
+}
+
 div.team {
     display: table;
     margin: auto;
