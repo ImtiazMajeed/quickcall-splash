@@ -63,6 +63,46 @@ div.screenshot {
     height: 20%;
     display: inline-block;
 }
+div.team {
+    display: table;
+    margin: auto;
+}
+
+div.team1, div.team2 {
+    display: table-row;
+}
+
+.person1, .person2, .person3, .person4, .person5, .person6, .person7, .person8 {
+    float: left;
+    display: table-cell;
+    height: 7em;
+}
+
+
+div.person1 {
+    content: url(../img/adam.jpeg);
+}
+div.person2 {
+    content: url(../img/austen.png);
+}
+div.person3 {
+    content: url(../img/dh.jpeg);
+}
+div.person4 {
+    content: url(../img/forest.jpeg);
+}
+div.person5 {
+    content: url(../img/imtiaz.jpeg);
+}
+div.person6 {
+    content: url(../img/jakob.jpeg);
+}
+div.person7 {
+    content: url(../img/kia.png);
+}
+div.person8 {
+    content: url(../img/mason.png);
+}
 
 .light {
     font-size: 40px;

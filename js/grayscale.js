@@ -22,6 +22,37 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    var shuffle = function (o) {
+        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+    };
+
+    var team=[
+        {name: 'adam', image: 'img/adam.jpeg'},
+        {name: 'austen', image: 'img/austen.png', github: 'http://www.github.com/austentalbot'},
+        {name: 'dh', image: 'img/dh.jpeg'},
+        {name: 'forest', image: 'img/forest.jpeg'},
+        {name: 'imtiaz', image: 'img/imtiaz.jpeg'},
+        {name: 'jakob', image: 'img/jakob.jpeg'},
+        {name: 'kia', image: 'img/kia.png'},
+        {name: 'mason', image: 'img/mason.png'}
+    ];
+
+    var team=shuffle(team);
+
+    for (var i = 1; i<=team.length; i++) {
+        var selector='.person';
+        selector+=i;
+        console.log(selector);
+        console.log(team[i-1]);
+        $(selector).css('content', 'url('+team[i-1].image+')');
+        $(selector).text(team[i-1].name);
+        $(selector).append('<a href="'+team[i-1].github+'"></a>');
+    }
+
+
+
 });
 
 // Google Maps Scripts
@@ -170,4 +201,8 @@ function init() {
         map: map,
         icon: image
     });
+
+    //randomize team order
+
+
 }
