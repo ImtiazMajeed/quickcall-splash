@@ -33,14 +33,15 @@ $(function() {
         {name: 'kia', image: 'img/kia.png', github: 'http://github.com/KiaFathi'},
         {name: 'mason', image: 'img/mason.png', github: 'http://github.com/maseh87'}
     ];
-    
+
+    //the way we assign image content only works on webkit browsers
+    //make sure we're not shuffling around the github handles for firefox when the pictures don't change
     if(navigator.userAgent.indexOf('AppleWebKit') != -1){
         //this is webkit!
         var shuffle = function (o) {
             for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
             return o;
         };
-
 
         var team=shuffle(team);
     }
@@ -54,8 +55,6 @@ $(function() {
         $(selector).text(team[i-1].name);
         $(selector).wrap('<a href="'+team[i-1].github+'"></a>');
     }
-
-
 
 });
 
