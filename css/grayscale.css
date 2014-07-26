@@ -78,28 +78,28 @@ div.team1, div.team2 {
 }
 
 
-div.person1 {
+.person1 {
     content: url(../img/adam.jpeg);
 }
-div.person2 {
+.person2 {
     content: url(../img/austen.png);
 }
-div.person3 {
+.person3 {
     content: url(../img/dh.jpeg);
 }
-div.person4 {
+.person4 {
     content: url(../img/forest.jpeg);
 }
-div.person5 {
+.person5 {
     content: url(../img/imtiaz.jpeg);
 }
-div.person6 {
+.person6 {
     content: url(../img/jakob.jpeg);
 }
-div.person7 {
+.person7 {
     content: url(../img/kia.png);
 }
-div.person8 {
+.person8 {
     content: url(../img/mason.png);
 }
 

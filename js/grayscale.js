@@ -23,32 +23,35 @@ $(function() {
         event.preventDefault();
     });
 
-    var shuffle = function (o) {
-        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-        return o;
-    };
+    if(navigator.userAgent.indexOf('AppleWebKit') != -1){
+        //this is webkit!
+        var shuffle = function (o) {
+            for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+            return o;
+        };
 
-    var team=[
-        {name: 'adam', image: 'img/adam.jpeg', github: 'http://github.com/aesprice'},
-        {name: 'austen', image: 'img/austen.png', github: 'http://www.github.com/austentalbot'},
-        {name: 'dh', image: 'img/dh.jpeg', github: 'http://github.com/dhfromkorea'},
-        {name: 'forest', image: 'img/forest.jpeg', github: 'http://github.com/foresttoney'},
-        {name: 'imtiaz', image: 'img/imtiaz.jpeg', github: 'http://github.com/imtiazmajeed'},
-        {name: 'jakob', image: 'img/jakob.jpeg', github: 'http://github.com/Yahkob'},
-        {name: 'kia', image: 'img/kia.png', github: 'http://github.com/KiaFathi'},
-        {name: 'mason', image: 'img/mason.png', github: 'http://github.com/maseh87'}
-    ];
+        var team=[
+            {name: 'adam', image: 'img/adam.jpeg', github: 'http://github.com/aesprice'},
+            {name: 'austen', image: 'img/austen.png', github: 'http://www.github.com/austentalbot'},
+            {name: 'dh', image: 'img/dh.jpeg', github: 'http://github.com/dhfromkorea'},
+            {name: 'forest', image: 'img/forest.jpeg', github: 'http://github.com/foresttoney'},
+            {name: 'imtiaz', image: 'img/imtiaz.jpeg', github: 'http://github.com/imtiazmajeed'},
+            {name: 'jakob', image: 'img/jakob.jpeg', github: 'http://github.com/Yahkob'},
+            {name: 'kia', image: 'img/kia.png', github: 'http://github.com/KiaFathi'},
+            {name: 'mason', image: 'img/mason.png', github: 'http://github.com/maseh87'}
+        ];
 
-    var team=shuffle(team);
+        var team=shuffle(team);
 
-    for (var i = 1; i<=team.length; i++) {
-        var selector='.person';
-        selector+=i;
-        console.log(selector);
-        console.log(team[i-1]);
-        $(selector).css('content', 'url('+team[i-1].image+')');
-        $(selector).text(team[i-1].name);
-        $(selector).wrap('<a href="'+team[i-1].github+'"></a>');
+        for (var i = 1; i<=team.length; i++) {
+            var selector='.person';
+            selector+=i;
+            console.log(selector);
+            console.log(team[i-1]);
+            $(selector).css('content', 'url('+team[i-1].image+')');
+            $(selector).text(team[i-1].name);
+            $(selector).wrap('<a href="'+team[i-1].github+'"></a>');
+        }
     }
 
 
